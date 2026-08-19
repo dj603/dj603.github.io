@@ -1,0 +1,36 @@
+---
+title: "CV"
+toc: false
+lang: en
+
+# ─────────────────────────────────────────────────────────────
+#  CV를 갱신할 때 할 일은 두 가지뿐입니다.
+#   1. 새 PDF를 cv/ 폴더에 넣습니다. (예전 파일은 그대로 두어도 됩니다)
+#   2. 아래 두 줄을 새 파일 이름과 갱신 날짜로 바꿉니다.
+#  본문에는 파일 이름이 한 번도 등장하지 않으므로, 여기만 고치면
+#  보기·다운로드·"Last updated" 표시가 모두 함께 바뀝니다.
+#  cv-updated 는 페이지에 그대로 찍히는 문자열입니다. 영문 표기로 적으세요.
+# ─────────────────────────────────────────────────────────────
+cv-file: "cv/Choi_CV_Aug2026.pdf"
+cv-updated: "August 2026"
+
+# 다운로드할 때 저장되는 파일 이름입니다. 날짜를 빼 두면
+# 갱신할 때마다 이 줄은 손대지 않아도 됩니다.
+cv-download-name: "Choi_Dong-june_CV.pdf"
+---
+
+Last updated: {{< meta cv-updated >}}
+
+::: {.cv-actions}
+[<i class="bi bi-download"></i> Download PDF]({{< meta cv-file >}}){.btn .btn-primary download="{{< meta cv-download-name >}}"}
+[<i class="bi bi-box-arrow-up-right"></i> Open in new tab]({{< meta cv-file >}}){.btn .btn-outline-secondary target="_blank"}
+:::
+
+```{=html}
+<object class="cv-embed" data="{{< meta cv-file >}}" type="application/pdf">
+  <p>
+    Your browser cannot display the PDF inline.
+    Please use <strong>Download PDF</strong> or <strong>Open in new tab</strong> above.
+  </p>
+</object>
+```

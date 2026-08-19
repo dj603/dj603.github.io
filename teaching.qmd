@@ -1,0 +1,37 @@
+---
+title: "Teaching"
+---
+
+## The Ohio State University
+
+| Term | Course | Role |
+|:-------|:---------------------------------------|:-------------------|
+| 2025 Autumn | Math 2177: Mathematical Topics for Engineers | Graduate Teaching Associate |
+| 2024 Autumn | Math 1156: Calculus for the Biological Sciences | Graduate Teaching Associate |
+| 2023 Autumn | Math 1156: Calculus for the Biological Sciences | Graduate Teaching Associate |
+| 2022 Autumn | Math 1172: Engineering Math A | Graduate Teaching Associate |
+| 2022 Spring | Math 1172: Engineering Math A | Graduate Teaching Associate |
+
+: {.striped .hover}
+
+## POSTECH
+
+| Term | Course | Role |
+|:-------|:---------------------------------------|:-------------------|
+| 2016 Spring | Math 110: Calculus | Excellent Student Teaching Associate |
+
+: {.striped .hover}
+
+## Grader
+
+The Ohio State University
+
+- Math 5522H: Honors Complex Analysis
+- Math 4568: Linear Algebra
+- Math 4552: Complex Analysis
+- Math 4548: Introduction to Analysis II
+- Math 4547: Introduction to Analysis I
+- Math 4512: Partial Differential Equations for Science and Engineering
+- Math 3345: Foundations of Higher Mathematics
+- Math 2255: Differential Equations and Their Applications
+

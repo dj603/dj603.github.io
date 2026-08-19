@@ -1,0 +1,10 @@
+/_site/
+/.quarto/
+
+**/*.quarto_ipynb
+
+# 원본 사진은 저장소에 넣지 않습니다.
+# EXIF 에 GPS 좌표(촬영 위치)가 들어 있고 이 저장소는 공개이기 때문입니다.
+# 웹용 my-photo.jpg 는 EXIF 가 제거된 상태라 커밋해도 됩니다.
+# 원본은 로컬에만 두고, 사진을 다시 구울 때만 씁니다 (CLAUDE.md 의 "Home 페이지" 참고).
+/My photo.jpg

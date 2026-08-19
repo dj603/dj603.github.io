@@ -1,0 +1,71 @@
+project:
+  type: website
+  output-dir: _site
+  # cv/ 폴더는 통째로 _site 로 복사합니다.
+  # 예전 CV 파일을 남겨 두어도 링크가 끊기지 않습니다.
+  resources:
+    - cv/
+
+website:
+  # <title> 태그는 "문서 제목 – 사이트 제목" 으로 만들어집니다.
+  # 구글 검색 결과에 이 문구가 그대로 나오도록 사이트 제목을 길게 씁니다.
+  # (navbar 에 보이는 짧은 이름은 아래 navbar: title: 이 따로 정합니다.)
+  title: "Dong-june Choi's Personal Webpage"
+  # 배포 주소입니다. 이 줄이 있어야 Quarto 가 sitemap.xml 을 만들고,
+  # 공유 링크 미리보기(open-graph)에 절대 주소를 넣을 수 있습니다.
+  # 나중에 개인 도메인을 사면 이 값만 바꾸면 됩니다.
+  site-url: https://dj603.github.io/
+  # 카카오톡·슬랙·트위터 등에 링크를 붙였을 때 나오는 미리보기 카드입니다.
+  open-graph: true
+  navbar:
+    # 화면 왼쪽 위에 보이는 이름. 위의 사이트 제목과 별개입니다.
+    title: "Dong-june Choi"
+    left:
+      - href: index.qmd
+        text: Home
+      - href: cv.qmd
+        text: CV
+      - href: publications.qmd
+        text: Research/Publication
+      - href: teaching.qmd
+        text: Teaching
+    right:
+      - icon: envelope
+        href: mailto:choi.1702@osu.edu
+        aria-label: Email
+  page-footer:
+    # GitHub 아이콘은 navbar 우측이 아니라 여기(하단 중앙)에 둡니다.
+    # center 를 배열로 쓰면 항목들이 가로로 나란히 놓입니다.
+    center:
+      # 항목 목록 안의 text 는 마크다운으로 해석되지 않으므로 링크는 HTML 로 씁니다.
+      - text: "Built with <a href='https://quarto.org'>Quarto</a>"
+      - icon: github
+        href: https://github.com/dj603
+        aria-label: GitHub
+
+# 인용 스타일만 전역으로 둡니다.
+# bibliography 는 전역에 두면 안 됩니다 — 페이지 front matter 와 "배열로 병합"되어
+# publications.qmd 의 nocite:@* 가 남의 논문까지 끌어옵니다.
+# 각 페이지에서 필요한 .bib 를 직접 지정하세요.
+#   · publications.qmd  → bibliography: publications.bib  (내 논문 목록)
+#   · 그 밖에 [@key] 로 인용하는 페이지 → bibliography: references.bib
+csl: https://www.zotero.org/styles/ieee
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-title: "Contents"
+    # 수식은 기본으로 MathJax가 렌더링합니다. 별도 설정이 필요 없습니다.
+    # 더 빠른 KaTeX로 바꾸려면 아래 줄의 주석을 해제하세요.
+    # html-math-method: katex
+
+# 사이트 전체를 영문으로 배포합니다. 화면에 보이는 문구는 영어로 쓰세요.
+# (유지보수용 주석은 한국어 그대로 둡니다.)
+lang: en
+
+# 주의: lang을 ko로 되돌리면 날짜 기본 형식(date-format: long)이 한국어로 바뀌는데,
+# 이때 listing 카드 템플릿이 깨져서 카드 안에 ":::" 문자가 그대로 새어나옵니다.
+# 아래처럼 날짜 형식을 명시하면 막을 수 있으므로 이 줄은 남겨 둡니다.
+date-format: "YYYY-MM-DD"

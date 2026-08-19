@@ -1,0 +1,60 @@
+% ═══════════════════════════════════════════════════════════════════
+%  내 논문 목록. Research/Publication 페이지의 "Publications" 섹션이
+%  이 파일 전체를 IEEE 형식으로 출력합니다 (nocite: @*).
+%
+%  논문 추가 = 여기에 BibTeX 항목 하나 붙여넣기. 그게 전부입니다.
+%  출력 순서는 이 파일에 적힌 순서를 따르므로 최신 논문을 맨 위에 두세요.
+%  (형식 참고용 예시는 파일 맨 아래에 주석으로 있습니다.)
+%
+%  ── 링크 붙이기 ────────────────────────────────────────────────
+%  note 필드에 **마크다운 링크**를 적으면 서지 항목 끝에 나타납니다.
+%  적지 않으면 아무것도 안 나옵니다.
+%
+%      note = {[journal](https://doi.org/10.xxxx/yyy) [arXiv](https://arxiv.org/abs/2601.00001)}
+%
+%  · 대괄호 안 글자가 그대로 라벨이 됩니다 — [code], [slides] 등 자유롭게.
+%  · `doi = {...}` 는 넣지 마세요. IEEE 가 "doi: 10.xxxx" 를 따로 찍어서
+%    [journal] 링크와 중복됩니다. 링크는 note 한 곳에만 모으세요.
+%  · URL 에 물결표(~)가 들어가면 공백으로 바뀝니다. %7E 로 적으세요.
+%
+%  ── 제목 대소문자 ──────────────────────────────────────────────
+%  IEEE 는 논문 제목을 소문자로 눕힙니다(sentence case). 고유명사는
+%  중괄호로 감싸야 대문자가 지켜집니다:  {Szegö}, {Hartogs}, {Kohn}
+%  안 감싸면 "the szegö projection on the hartogs triangle" 이 됩니다.
+%
+%  ── % 는 항목 "안"에서 주석이 아닙니다 ─────────────────────────
+%  항목(@article{...}) 바깥에서만 주석입니다. 필드를 잠시 빼고 싶으면
+%  % 를 붙이지 말고 그 줄을 아예 지우세요.
+%
+%  ※ 다른 사람 논문을 본문에서 [@key] 로 인용할 때는 이 파일이 아니라
+%    references.bib 에 넣으세요. 여기 넣으면 내 논문 목록에 섞여 버립니다.
+% ═══════════════════════════════════════════════════════════════════
+
+@article{choi_2026,
+  title   = {Sharp $L^p$ regularity of the {Szegö} projection on the {Hartogs} triangle},
+  author  = {Choi, Dong-june and Koenig, Kenneth D.},
+  journal = {submitted},
+  year    = {2026}
+}
+
+% ── 아래는 형식 참고용 예시입니다. 필요 없으면 지우세요. ──────────
+%
+% @article{choi2026example,
+%   title   = {Title of the Paper},
+%   author  = {Choi, Dong-june and Coauthor, Alex},
+%   journal = {Journal of Things},
+%   year    = {2026},
+%   volume  = {12},
+%   number  = {3},
+%   pages   = {1--20},
+%   note    = {[journal](https://doi.org/10.xxxx/yyy) [arXiv](https://arxiv.org/abs/2601.00001)}
+% }
+%
+% @inproceedings{choi2025example,
+%   title     = {Title of the Conference Paper},
+%   author    = {Choi, Dong-june},
+%   booktitle = {Proceedings of Somewhere},
+%   year      = {2025},
+%   pages     = {1--12},
+%   note      = {[arXiv](https://arxiv.org/abs/2501.00002)}
+% }

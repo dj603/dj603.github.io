@@ -1,0 +1,50 @@
+---
+title: "Research/Publication"
+
+# 이 페이지의 Publications 섹션은 publications.bib "전체"를 인용 형식으로 찍습니다.
+#  · bibliography 는 이 페이지에서만 지정합니다. _quarto.yml 에 두면 배열로 병합돼
+#    references.bib 의 남의 논문까지 @* 가 끌어옵니다.
+#  · nocite 의 @* 는 "인용 여부와 상관없이 모든 항목"이라는 뜻입니다.
+bibliography: publications.bib
+# 서지 항목 뒤에 [journal] [arXiv] 링크를 붙입니다. 링크는 publications.bib 의
+# note 필드에 마크다운으로 적습니다. 자세한 설명은 pub-links.lua 주석 참고.
+#
+# citeproc: false 가 꼭 필요합니다 — Quarto 의 citeproc 는 모든 필터보다
+# 뒤에 돌아서, 필터가 손댈 시점에는 서지가 아직 비어 있습니다.
+# 대신 pub-links.lua 가 citeproc 를 직접 부릅니다. 이 줄을 지우면 링크가 사라집니다.
+citeproc: false
+filters:
+  - pub-links.lua
+
+nocite: |
+  @*
+---
+
+<!--
+  ┌─ 이 페이지를 유지보수하는 법 ────────────────────────────────────┐
+  │                                                                  │
+  │  1) 소개 글 고치기        →  _research-interests.qmd             │
+  │  2) 진행 중인 연구 추가·삭제 →  _in-preparation.qmd (줄 하나)      │
+  │  3) 논문 추가             →  publications.bib (BibTeX 항목 하나)  │
+  │  4) 논문이 나왔을 때       →  _in-preparation.qmd 에서 줄 지우고    │
+  │                              publications.bib 에 항목 추가        │
+  │                                                                  │
+  │  세 섹션 모두 자동으로 채워지므로 이 파일을 고칠 일은 없습니다.     │
+  │  (단 한 번, 아래 Publications 안내 상자는 내용을 채운 뒤 지우세요) │
+  │  자세한 절차는 README.md 의 "연구/논문 페이지 관리" 참고.          │
+  └──────────────────────────────────────────────────────────────────┘
+-->
+
+## Research Interests
+
+{{< include _research-interests.qmd >}}
+
+## In Preparation
+
+{{< include _in-preparation.qmd >}}
+
+## Publications
+
+
+::: {#refs}
+:::

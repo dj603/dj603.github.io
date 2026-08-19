@@ -1,0 +1,24 @@
+<!--
+  Research/Publication 페이지 맨 위의 "Research Interests" 소개 글입니다.
+  소개 글을 고칠 때는 이 파일만 열면 됩니다.
+  페이지 구조(섹션·서지)는 publications.qmd 가 담당하므로 건드릴 필요가 없습니다.
+
+  · 파일 이름이 _ 로 시작하므로 이 파일 자체는 별도 페이지로 만들어지지 않고,
+    publications.qmd 의 {{< include >}} 자리에 그대로 끼워집니다.
+  · 페이지에서 "## Research Interests" 아래에 들어가므로 제목은 ### 부터 쓰세요.
+  · 이 페이지는 영문(lang: en)입니다. 본문은 영어로 쓰세요.
+  · 남의 논문을 인용하려면 references.bib 에 항목을 넣고 [@key] 로 쓰면 됩니다.
+    (publications.bib 이 아닙니다 — 거기 넣으면 내 논문 목록에 섞입니다.)
+
+  ── 여기는 마크다운입니다. LaTeX/BibTeX 습관 두 가지를 조심하세요 ──
+  · 주석 기호는 % 가 아니라 HTML 주석입니다 (지금 이 상자처럼).
+    % 로 시작한 줄은 주석이 아니라 그대로 화면에 찍힙니다.
+    주석 안에 닫는 기호를 글자 그대로 적어도 거기서 주석이 끝나 버립니다.
+  · 특수문자는 LaTeX 명령이 아니라 ö 처럼 글자를 직접 쓰세요.
+    수식 기호 사이(달러 표시)에서는 LaTeX 문법이 그대로 통합니다.
+-->
+
+I use harmonic analysis methods to solve problems in several complex variables.
+My thesis work deals with sharp $L^p$ regularity of the Szegö projection on the
+Hartogs triangle. My other work is on topics within $L^2$-theory of several
+complex variables.
