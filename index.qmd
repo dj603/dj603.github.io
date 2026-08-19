@@ -27,7 +27,7 @@ toc: false
 ::: {.g-col-12 .g-col-md-7}
 
 Welcome! My name is Dong-june Choi and I am a graduate student at the
-[Ohio State University](https://math.osu.edu/). My academic advisor is
+[Ohio State University](https://math.osu.edu/) math department. My academic advisor is
 Prof. [Kenneth Koenig](https://math.osu.edu/people/koenig.271).
 I study several complex variables and harmonic analysis.
 I did my undergraduate work at [POSTECH](https://math.postech.ac.kr/en/).

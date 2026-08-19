@@ -145,7 +145,18 @@ front matter와 *덮어쓰기가 아니라 배열로 병합*되어 `[references.
 
 ### 에셋 경로
 
-이미지·PDF는 참조하는 `.qmd` 파일 기준 상대경로입니다. 지금 사이트가 쓰는 에셋은 `cv/`의 PDF와 `my-photo.jpg`(index.qmd)입니다. 원본 사진 `My photo.jpg`는 어느 문서도 참조하지 않으므로 빌드 결과에 들어가지 않습니다. **참조하는 문서가 없는 에셋은 `_site`로 복사되지 않습니다** — 폴더째 배포하려면 `_quarto.yml`의 `project: resources:`에 추가하세요 (`cv/`가 그렇게 되어 있습니다).
+이미지·PDF는 참조하는 `.qmd` 파일 기준 상대경로입니다. 지금 사이트가 쓰는 에셋은 `cv/`의 PDF와 `my-photo.jpg`(index.qmd)입니다.
+
+**참조하는 문서가 없는 에셋은 `_site`로 복사되지 않습니다.** 배포에 넣으려면 `_quarto.yml`의 `project: resources:`에 적어야 합니다. 지금 거기 등록된 것은 둘입니다.
+
+| 항목 | 이유 |
+|---|---|
+| `cv/` | `<object>` 로만 참조되는 PDF라 폴더째 복사합니다 |
+| `"google*.html"` | Google Search Console 소유권 확인 파일. 어느 문서도 참조하지 않습니다 |
+
+와일드카드가 아무것도 못 잡아도 빌드는 정상입니다. 확인 파일을 프로젝트 루트에 두기만 하면 배포에 실려 갑니다.
+
+원본 사진 `My photo.jpg`는 어느 문서도 참조하지 않으므로 빌드 결과에 들어가지 않고, **EXIF에 GPS 좌표(촬영 위치)가 있어 `.gitignore`로도 막아 두었습니다.** 저장소가 공개이기 때문입니다. 웹용 `my-photo.jpg`는 EXIF가 제거된 상태라 커밋해도 됩니다.
 
 ### CV 페이지
 
@@ -212,7 +223,7 @@ title = {Sharp $L^p$ regularity of the {Szegö} projection on the {Hartogs} tria
 
 수식(`$L^p$`)은 감싸지 않아도 그대로 보존됩니다.
 
-### `quarto preview` 를 켠 채로 `quarto render` 를 돌리지 마세요
+### `quarto preview` 를 켠 채로 `quarto render` · `quarto publish` 를 돌리지 마세요
 
 둘 다 `_site/` 에 결과를 쓰기 때문에 서로 덮어씁니다. 증상이 헷갈립니다.
 
@@ -221,6 +232,23 @@ title = {Sharp $L^p$ regularity of the {Szegö} projection on the {Hartogs} tria
   `NotFound ... rename '...html' -> '_site/...html'`.
 - 그 상태에서 `_site` 를 지우면 **참조된 에셋이 같이 사라집니다.**
   (실제로 `receipt.pdf` 를 한 번 잃었습니다.)
+
+**`quarto publish gh-pages` 도 내부에서 render 를 돌리므로 똑같이 깨집니다.**
+그런데 이쪽은 증상이 훨씬 고약합니다 — **명령이 에러 없이 끝난 것처럼 보이는데
+`gh-pages` 브랜치에 파일이 하나도 안 올라갑니다.** 브랜치는 만들어지고
+`Initializing gh-pages branch` 커밋까지 찍히기 때문에 성공한 줄 알기 쉽습니다.
+
+이 상태에서 `<user>.github.io` 저장소라면 GitHub 이 `main` 을 Jekyll 로 렌더해서
+**README 가 홈페이지로 뜹니다.** 사이트는 멀쩡히 200 을 주는데 내용이 딴것입니다.
+
+의심되면 브랜치 내용을 세어 보세요. 0 이면 실패한 것입니다.
+
+```
+git ls-tree -r origin/gh-pages --name-only | wc -l
+```
+
+프로젝트 **루트**에 `publications.html` 이나 `site_libs/` 가 떨어져 있는 것도
+같은 사고의 흔적입니다. `_site/` 로 옮겨지지 못하고 중간에 멈춘 산출물이니 지우세요.
 
 빌드를 검증할 때는 preview 를 먼저 끄세요. 반대로 preview 로 확인 중이라면
 `quarto render` 를 따로 돌리지 말고 preview 가 갱신한 화면을 보면 됩니다.
