@@ -207,8 +207,8 @@ Publications 섹션은 `nocite: @*`("인용 여부와 무관하게 전부 출력
 2. `cv.qmd` 맨 위 두 줄만 고칩니다.
 
 ```yaml
-cv-file: "cv/Choi_CV_Aug2026.pdf"   # 새 파일 이름
-cv-updated: "August 2026"           # 페이지에 "Last updated"로 그대로 찍힘
+cv-file: "cv/Choi_CV_Sep2026.pdf"   # 새 파일 이름
+cv-updated: "September 2026"        # 페이지에 "Last updated"로 그대로 찍힘
 ```
 
 끝입니다. 본문에는 파일 이름이 한 번도 나오지 않고 `{{< meta cv-file >}}`로만
