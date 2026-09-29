@@ -11,8 +11,8 @@ lang: en
 #  보기·다운로드·"Last updated" 표시가 모두 함께 바뀝니다.
 #  cv-updated 는 페이지에 그대로 찍히는 문자열입니다. 영문 표기로 적으세요.
 # ─────────────────────────────────────────────────────────────
-cv-file: "cv/Choi_CV_Aug2026.pdf"
-cv-updated: "August 2026"
+cv-file: "cv/Choi_CV_Sep2026.pdf"
+cv-updated: "September 2026"
 
 # 다운로드할 때 저장되는 파일 이름입니다. 날짜를 빼 두면
 # 갱신할 때마다 이 줄은 손대지 않아도 됩니다.
