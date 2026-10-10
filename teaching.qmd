@@ -33,5 +33,6 @@ The Ohio State University
 - Math 4547: Introduction to Analysis I
 - Math 4512: Partial Differential Equations for Science and Engineering
 - Math 3345: Foundations of Higher Mathematics
+- Math 2568: Linear Algebra
 - Math 2255: Differential Equations and Their Applications
 
